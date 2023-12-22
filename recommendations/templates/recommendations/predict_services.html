@@ -1,0 +1,15 @@
+<!-- myapp/templates/predict_services.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Services</title>
+</head>
+<body>
+    <h2>Predict Services</h2>
+    <form method="post" action="{% url 'predict_services' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

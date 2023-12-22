@@ -1,0 +1,26 @@
+<!-- recommendations/templates/recommendations/topic_search.html -->
+
+{% extends 'recommendations/base.html' %}
+
+{% block title %}Topic Search{% endblock %}
+
+{% block content %}
+    <h2>Topic Search</h2>
+    <form method="get" action="{% url 'topic_search' %}">
+        {% csrf_token %}
+        <label for="search_query">Search:</label>
+        <input type="text" name="search_query" id="search_query" value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Search Results</h2>
+    {% if services %}
+        <ul>
+            {% for service in services %}
+                <li>{{ service }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No services found.</p>
+    {% endif %}
+{% endblock %}

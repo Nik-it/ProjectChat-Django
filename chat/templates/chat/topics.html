@@ -1,0 +1,53 @@
+<!-- topics.html -->
+{% extends 'chat/base.html' %}
+
+{% block title %}Topics{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="vertical-navbar">
+            <ul>
+                <li><a href="#">Bank</a></li>
+                <li><a href="#">Home Price Estimator</a></li>
+            </ul>
+
+            <div>
+
+            </div>
+
+            <div class="external-links">
+                <a href="https://nikitmht.pythonanywhere.com" target="_blank">nikitmht(ProjectPartI)</a>
+            </div>
+            <div class="external-links">
+                <a href="https://nikitmht1.pythonanywhere.com" target="_blank">nikitmht1</a>
+            </div>
+
+            <div class="external-links">
+                <a href="https://nikitmhtdjango.pythonanywhere.com/recommendations/topic-search/" target="_blank">Recommendation System</a>
+            </div>
+
+            <!-- Add more vertical navbar links as needed -->
+        </div>
+
+
+    </div>
+    <div>
+        <h2>Topics Page</h2>
+        <p>This is the topics page content.</p>
+        <!-- Add more content as needed -->
+    </div>
+{% endblock %}
+
+{% block extra_styles %}
+    <style>
+        .content {
+            color: white;
+            background-color: black;
+        }
+
+        .content a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}

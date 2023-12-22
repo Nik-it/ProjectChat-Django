@@ -1,0 +1,25 @@
+<!-- templates/your_app/dynamic_text_field.html -->
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+  <h2>Dynamic Text Field Form</h2>
+  <form method="post" id="dynamicForm">
+    {% csrf_token %}
+    {{ form.text_fields }}
+    <button type="button" id="addTextField">Add More Fields</button>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var form = $('#dynamicForm');
+      var addButton = $('#addTextField');
+
+      addButton.click(function() {
+        var input = $('<input type="text" name="text_fields" maxlength="255" required>');
+        form.append(input);
+      });
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,21 @@
+<!-- recommendations/templates/recommendations/recommended_services.html -->
+
+{% extends 'recommendations/base.html' %}
+
+{% block title %}Recommended Services{% endblock %}
+
+{% block content %}
+    <h2>Recommended Services</h2>
+
+    {% if services %}
+        <ul>
+            {% for service in services %}
+                <li>
+                    <a href="{% url 'service_detail' service.id %}">{{ service.service_name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recommended services available.</p>
+    {% endif %}
+{% endblock %}

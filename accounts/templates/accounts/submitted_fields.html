@@ -1,0 +1,11 @@
+<!-- templates/your_app/submitted_fields.html -->
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+  <h2>Submitted Fields</h2>
+  <ul>
+    {% for pair in pairs %}
+      <li>{{ pair.0 }}:{{ pair.1 }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

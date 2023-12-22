@@ -1,0 +1,13 @@
+<!-- recommendations/templates/recommendations/services.html -->
+{% extends 'recommendations/base.html' %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+    <h2>Services Available</h2>
+    <ul>
+        {% for service in services_list %}
+            <li>{{ service }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
